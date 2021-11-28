@@ -1,0 +1,15 @@
+{
+  "name": "github-actions",
+  "version": "0.0.1",
+  "description": "github actions project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "actions"
+  ],
+  "author": "Gabriel Gregório da Silva",
+  "license": "MIT"
+}
