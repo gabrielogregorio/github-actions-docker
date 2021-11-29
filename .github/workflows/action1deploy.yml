@@ -42,7 +42,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-      - run: docker build -t github-actions
+      - run: docker build -t github-actions .
       - run: echo "Deploy test"
 
   deploy-production:
@@ -58,5 +58,5 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-      - run: docker build -t github-actions
+      - run: docker build -t github-actions .
       - run: echo "Deploy production"
