@@ -1,0 +1,19 @@
+# Desenvolvimento
+version: '3.1'
+
+services:
+  app:
+    container_name: github-actions-project
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Volume para criar o ambiente compartilhado
+    volumes:
+        - ./:/usr/src/app
+    environment:
+      - PORT=3000
+
+    # Porta do docker <> Porta local
+    ports:
+      - 3000:3000

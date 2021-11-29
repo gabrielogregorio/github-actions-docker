@@ -1,0 +1,27 @@
+name: CI Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  job-name-test-ci:
+    runs-on: ubuntu-20.04
+  
+    strategy:
+      matrix:
+        # Testar duas versões do node
+        node-version: [14.x, 16.x]
+
+    # Etapas da ação
+    steps:
+      # Checkout do código
+      - uses: actions/checkout@v2
+      # Configurar a matrix
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      # Roda os testes
+      - run: npm run test
