@@ -2,7 +2,7 @@ name: CI Tests
 
 on:
   push:
-  pull_requests:
+  pull_request:
 
 jobs:
   job-name-test-ci:
