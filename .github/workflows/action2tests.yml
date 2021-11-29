@@ -22,9 +22,6 @@ jobs:
   uses: actions/setup-node@v2
   with:
     node-version: ${{ matrix.node-version }}
-
-  # parecido com o npm install, mas não altera os packages
   - run: npm ci
-
   # Roda os testes
   - run: npm run test
