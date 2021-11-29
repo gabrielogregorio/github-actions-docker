@@ -23,7 +23,7 @@ jobs:
   with:
     node-version: ${{ matrix.node-version }}
 
-  # parecido com o npm install, mas não altera o package.json ou package-lock.json
+  # parecido com o npm install, mas não altera os packages
   - run: npm ci
 
   # Roda os testes
