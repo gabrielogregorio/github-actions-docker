@@ -1,3 +1,3 @@
 module.exports = (name = '') => {
-  return {msg: `Hello ${name ? name : 'World' }` }
+  return {msg: `Hello error ${name ? name : 'World' }` }
 }
